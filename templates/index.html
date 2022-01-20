@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	
+	<p>{{ username }}</p>
+	<p>{{ email }}</p>
+	
+	{% for note in notes %}
+		{{note}} <br>
+	{% endfor %}
+
+	{% for post in posts %}
+		{{post.body}} <br>
+		<img src="{{post.image}}" width="100" /> <br>
+	{% endfor %}
+
+
+
+{% endblock %}
