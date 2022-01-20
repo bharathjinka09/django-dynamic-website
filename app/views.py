@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Post, About, Contact
+from .models import Post, About, Contact, CarouselImages
 
 # Create your views here.
 
@@ -8,6 +8,7 @@ def index(request):
 	username = request.user
 	email = "bha@gma.com"
 	posts = Post.objects.all()
+	images = CarouselImages.objects.all()
 
 	notes = [
 			"Read books",
@@ -20,6 +21,7 @@ def index(request):
 		"email":email,
 		"notes":notes,
 		"posts":posts,
+		"images":images,
 	}
 	return render(request,"index.html",context)
 
