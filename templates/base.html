@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	<style type="text/css">
+		.footer{
+			background-color: #fff;
+		}
+		footer {
+		    position: fixed;
+		    height: 50px;
+		    bottom: 0;
+		    width: 100%;
+		}
+		body{
+			background-color: aliceblue !important;
+		}
+	</style>
 	<title></title>
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,6 +39,8 @@
 		{% block content %}
 		{% endblock %}
 	</div>
+
+		{% include 'includes/footer.html' %}
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
