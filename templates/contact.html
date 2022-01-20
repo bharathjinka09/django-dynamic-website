@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<h1 class="text-center">
+		Contact Us
+	</h1>
+		
+	{% for c in contact %}
+
+	
+		<p> 
+			<strong>Email:</strong>  {{ c.email }}
+		</p>
+		<p><strong>Phone:</strong> {{ c.phone }}</p>
+		
+		<address>
+			<strong>Address:</strong> {{ c.address }}
+		</address>
+
+	{% endfor %}
+
+{% endblock %}
